@@ -23,11 +23,11 @@
             <h1 class="fw-bold text-center mb-4">
                 SALDO ACTUAL:
                 {% if saldo_actual > 0 %}
-                    <span class="text-success">{{ saldo_actual }}€</span>
+                    <span class="text-success">{{ saldo_actual|floatformat:2 }}€</span>
                 {% elif saldo_actual < 0 %}
-                    <span class="text-danger">{{ saldo_actual }}€</span>
+                    <span class="text-danger">{{ saldo_actual|floatformat:2 }}€</span>
                 {% else %}
-                    <span class="text-body">{{ saldo_actual }}€</span>
+                    <span class="text-body">{{ saldo_actual|floatformat:2 }}€</span>
                 {% endif %}
             </h1>
 
