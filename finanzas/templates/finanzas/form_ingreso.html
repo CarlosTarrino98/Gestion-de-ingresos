@@ -1,0 +1,26 @@
+{% extends "finanzas/base.html" %}
+
+{% block contenido %}
+<h2 class="text-center mb-4">Añadir ingreso</h2>
+
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <form method="post" class="p-4 bg-white bg-opacity-75 rounded shadow">
+            {% csrf_token %}
+            <div class="mb-3">
+                {{ form.fecha.label_tag }} {{ form.fecha }}
+            </div>
+            <div class="mb-3">
+                {{ form.cantidad.label_tag }} {{ form.cantidad }}
+            </div>
+            <div class="mb-3">
+                {{ form.concepto.label_tag }} {{ form.concepto }}
+            </div>
+            <div class="text-center mt-4">
+                <button type="submit" class="btn btn-success me-2">Guardar</button>
+                <a href="{% url 'lista_ingresos' %}" class="btn btn-secondary">Cancelar</a>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}
