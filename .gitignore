@@ -1,0 +1,31 @@
+# Entornos virtuales
+.venv/
+env/
+venv/
+
+# Cachés de Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Archivos de bases de datos
+*.sqlite3
+*.db
+
+# Archivos de configuración locales
+*.log
+*.swp
+*.bak
+*.egg-info/
+secrets.json
+
+# Archivos del sistema operativo
+.DS_Store
+
+# Archivos de usuario de PyCharm
+.idea/
+
+# Archivos exportados
+*.xlsx
+*.pdf
