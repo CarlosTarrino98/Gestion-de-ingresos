@@ -231,14 +231,15 @@ def generar_seguimiento(request):
         for ingreso in ingresos:
             data_ingresos.append([
                 ingreso.fecha.strftime('%d/%m/%Y'),
-                ingreso.concepto,
+                Paragraph(ingreso.concepto, styles['Normal']),
                 f"{ingreso.cantidad:.2f}"
             ])
-        table_ingresos = Table(data_ingresos, hAlign='LEFT')
+        table_ingresos = Table(data_ingresos, colWidths=[80, 300, 80], hAlign='LEFT')
         table_ingresos.setStyle(TableStyle([
             ('BACKGROUND', (0, 0), (-1, 0), colors.lightblue),
             ('GRID', (0, 0), (-1, -1), 0.5, colors.grey),
-            ('ALIGN', (2, 1), (2, -1), 'RIGHT')
+            ('ALIGN', (2, 1), (2, -1), 'RIGHT'),
+            ('VALIGN', (0, 0), (-1, -1), 'TOP')
         ]))
         elements.append(table_ingresos)
         elements.append(Spacer(1, 24))
@@ -249,14 +250,15 @@ def generar_seguimiento(request):
         for gasto in gastos:
             data_gastos.append([
                 gasto.fecha.strftime('%d/%m/%Y'),
-                gasto.concepto,
+                Paragraph(gasto.concepto, styles['Normal']),
                 f"{gasto.cantidad:.2f}"
             ])
-        table_gastos = Table(data_gastos, hAlign='LEFT')
+        table_gastos = Table(data_gastos, colWidths=[80, 300, 80], hAlign='LEFT')
         table_gastos.setStyle(TableStyle([
             ('BACKGROUND', (0, 0), (-1, 0), colors.salmon),
             ('GRID', (0, 0), (-1, -1), 0.5, colors.grey),
-            ('ALIGN', (2, 1), (2, -1), 'RIGHT')
+            ('ALIGN', (2, 1), (2, -1), 'RIGHT'),
+            ('VALIGN', (0, 0), (-1, -1), 'TOP')
         ]))
         elements.append(table_gastos)
 

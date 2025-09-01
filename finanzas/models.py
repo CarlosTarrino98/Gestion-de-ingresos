@@ -4,7 +4,7 @@ from django.contrib.auth.models import User
 class Ingreso(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     fecha = models.DateField()
-    concepto = models.CharField(max_length=200)
+    concepto = models.CharField(max_length=300)
     cantidad = models.DecimalField(max_digits=10, decimal_places=2)
 
     def __str__(self):
@@ -13,7 +13,7 @@ class Ingreso(models.Model):
 class Gasto(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     fecha = models.DateField()
-    concepto = models.CharField(max_length=200)
+    concepto = models.CharField(max_length=300)
     cantidad = models.DecimalField(max_digits=10, decimal_places=2)
 
     def __str__(self):

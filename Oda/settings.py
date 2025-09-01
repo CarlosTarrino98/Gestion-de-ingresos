@@ -12,9 +12,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'clave-insegura-de-desarrollo')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['CarlosTares98.pythonanywhere.com']
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 

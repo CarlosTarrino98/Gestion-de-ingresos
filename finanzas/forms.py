@@ -10,7 +10,7 @@ class IngresoForm(forms.ModelForm):
                 attrs={'class': 'form-control', 'type': 'date'},
                 format='%Y-%m-%d'
             ),
-            'concepto': forms.TextInput(attrs={'class': 'form-control'}),
+            'concepto': forms.Textarea(attrs={'class': 'form-control'}),
             'cantidad': forms.NumberInput(attrs={'class': 'form-control'}),
         }
 
@@ -28,7 +28,7 @@ class GastoForm(forms.ModelForm):
                 attrs={'class': 'form-control', 'type': 'date'},
                 format='%Y-%m-%d'
             ),
-            'concepto': forms.TextInput(attrs={'class': 'form-control'}),
+            'concepto': forms.Textarea(attrs={'class': 'form-control'}),
             'cantidad': forms.NumberInput(attrs={'class': 'form-control'}),
         }
 
